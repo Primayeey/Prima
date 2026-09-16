@@ -185,17 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. "Contact Me" button click behavior
   if (contactBtn) {
-    contactBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showToast('Kanal kontak di atas siap diisi dengan informasi pribadi Anda!');
-      const contactCard = document.querySelector('.contact-card');
-      if (contactCard) {
-        contactCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        contactCard.style.outline = '2px solid var(--primary)';
-        setTimeout(() => {
-          contactCard.style.outline = 'none';
-        }, 1200);
-      }
+    contactBtn.addEventListener('click', () => {
+      showToast('Membuka aplikasi email...');
     });
   }
 });
